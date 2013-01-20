@@ -1,0 +1,16 @@
+<!DOCTYPE dictionary [
+ <!ELEMENT dictionary (note, word+)>
+ <!ELEMENT note ANY>
+ <!ELEMENT word (update?, name, definition+, usage*)>
+ <!ELEMENT update EMPTY>
+ <!ATTLIST update 
+  date CDATA #REQUIRED 
+  editor CDATA #IMPLIED
+ >
+ <!ELEMENT name (#PCDATA)>
+ <!ATTLIST name is_acronym (true | false) "false">
+ <!ELEMENT definition (#PCDATA)>
+ <!ELEMENT usage (#PCDATA | i)*>
+ <!ELEMENT i (#PCDATA)>
+ <!ENTITY herong "Dr. Herong Yang">
+]>

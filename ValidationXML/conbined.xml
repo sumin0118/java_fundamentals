@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE dictionary [
+ <!ELEMENT dictionary (note, word+)>
+ <!ELEMENT note ANY>
+ <!ELEMENT word (update?, name, definition+, usage*)>
+ <!ELEMENT update EMPTY>
+ <!ATTLIST update 
+  date CDATA #REQUIRED 
+  editor CDATA #IMPLIED
+ >
+ <!ELEMENT name (#PCDATA)>
+ <!ATTLIST name is_acronym (true | false) "false">
+ <!ELEMENT definition (#PCDATA)>
+ <!ELEMENT usage (#PCDATA | i)*>
+ <!ELEMENT i (#PCDATA)>
+ <!ENTITY herong "Dr. Herong Yang">
+]>
+
+
+<dictionary>
+ <note>Copyright (c) 2002 by &herong;</note>
+ <word>
+  <name is_acronym="true" language="EN">POP</name>
+  <definition>Post Office Protocol</definition>
+  <definition>Point Of Purchase</definition>
+ </word>
+ <word>
+  <update date="2002-12-23"/> 
+  <name is_acronym="yes">XML</name>
+  <definition>eXtensible Markup Language</definition>
+  <note>XML comes from SGML</note>
+ </word>
+ <word>
+  <update editor="Herong Yang"/> 
+  <name>markup</name>
+  <definition>The amount added to the cost price to calculate 
+the selling price - <i>Webster</i></definition>
+ </word>
+</dictionary>
